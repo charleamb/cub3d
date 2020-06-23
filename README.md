@@ -2,7 +2,7 @@
 little fps 
 The setup is made for MAC OS and QWERTY keyboard so if you are under linux  you need to change some line;
 in the cub3d.h you need to change line 25 "minilibx_opengl/mlx.h" into "minilibx/mlx.h"
-                                  line 28 the define TOP 13 into 119 for qwertylinux / 122 azerty linux.
+                                 - line 28 the define TOP 13 into 119 for qwertylinux / 122 azerty linux.
                                   line 29            BOT 1       115                   115
                                   line 30           LEFT 0       97                    113
                                   line 31          RIGHT 2       100                   100
