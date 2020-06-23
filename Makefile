@@ -6,7 +6,7 @@
 #    By: chgilber <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/16 11:50:11 by chgilber          #+#    #+#              #
-#    Updated: 2020/06/23 16:37:20 by chgilber         ###   ########.fr        #
+#    Updated: 2020/06/23 19:39:31 by chgilber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ $(NAME) : $(OBJS)
 	@echo "$(_END)$(_GREEN) [OK]\t"
 	@make -C libft
 	@echo "$(_END)$(_GREEN)[Done]"
-	gcc $(CFLAGS) -L libft -lft -lmlx -framework OpenGL -framework AppKit -o $@ $(OBJS) $(LMINX)
+	gcc $(CFLAGS) -L libft -lft -framework OpenGL -framework AppKit -o $@ $(OBJS) $(LMINX)
 
 %.o : %.c
 	@echo "$(_END)$(_GREEN) [OK]\t"
@@ -93,7 +93,7 @@ $(NAME_BONUS) : $(OBJS_BONUS)
 	@echo "$(_END)$(_BLUE) [OK]\t"
 	@make -C libft
 	@echo "$(_END)$(_BLUE)[Done]"
-	gcc $(CFLAGS) -L libft -lft -lmlx -framework OpenGL -framework AppKit -o $@ $(OBJS_BONUS) $(LMINX)
+	gcc $(CFLAGS) -L libft -lft -framework OpenGL -framework AppKit -o $@ $(OBJS_BONUS) $(LMINX)
 
 fclean : clean
 	@rm -f $(NAME) $(DPDCS) $(OBJS_BONUS) $(NAME_BONUS)
