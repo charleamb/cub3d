@@ -1,5 +1,6 @@
 # cub3d
 little fps 
+
 The setup is made for MAC OS and QWERTY keyboard so if you are under linux  you need to change some line;
 in the cub3d.h you need to change :
                                   
