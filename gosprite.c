@@ -6,7 +6,7 @@
 /*   By: chgilber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/29 19:36:17 by chgilber          #+#    #+#             */
-/*   Updated: 2020/06/08 20:54:11 by chgilber         ###   ########.fr       */
+/*   Updated: 2020/06/25 17:12:46 by chgilber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ void	ft_put_pixeltexsp(t_all *all, t_dda dda, int x, int y)
 			&all->img->endian[texture]);
 	pix_array = (void *)all->img->addr[0];
 	pixtxt_array = (void *)all->img->addr[texture];
+//	printf(" clor[%d]\n",pixtxt_array[dda.texty][dda.textx]);
 	if (pixtxt_array[dda.texty][dda.textx] != -16777216 &&
+			pixtxt_array[dda.texty][dda.textx] != 461842 &&
 			pixtxt_array[dda.texty][dda.textx] != 0)
 		pix_array[y][x] = pixtxt_array[dda.texty][dda.textx];
 }

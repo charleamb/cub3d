@@ -6,12 +6,12 @@
 #    By: chgilber <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/16 11:50:11 by chgilber          #+#    #+#              #
-#    Updated: 2020/06/23 19:43:54 by chgilber         ###   ########.fr        #
+#    Updated: 2020/06/25 16:49:01 by chgilber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Cub3D
-NAME_BONUS = Cub3D_bonus
+NAME = cub3D
+NAME_BONUS = cub3D_bonus
 
 SRCS =		./parsing/parse.c ./parsing/parsedata.c ./parsing/parsemap.c \
 			./parsing/parsepath.c ft_strcat.c keyrelease.c \

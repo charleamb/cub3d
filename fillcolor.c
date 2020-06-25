@@ -6,7 +6,7 @@
 /*   By: chgilber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:41:54 by chgilber          #+#    #+#             */
-/*   Updated: 2020/06/15 12:39:26 by chgilber         ###   ########.fr       */
+/*   Updated: 2020/06/25 18:52:33 by chgilber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_put_pixel(t_all *all, int x, int y, int color)
 {
 	int (*pix_array)[all->ret->longueur];
 
-	all->img->addr[0] = mlx_get_data_addr(all->img->img[0], &all->img->bpp[0],
-			&all->img->line_length[0], &all->img->endian[0]);
 	pix_array = (void *)all->img->addr[0];
 	pix_array[y][x] = color;
 }

@@ -6,7 +6,7 @@
 /*   By: chgilber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 13:19:13 by chgilber          #+#    #+#             */
-/*   Updated: 2020/06/23 16:38:10 by chgilber         ###   ########.fr       */
+/*   Updated: 2020/06/25 16:41:57 by chgilber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ t_struct	initret(t_struct ret, char **av)
 	}
 	ret = initstrut(ret);
 	fd = open(av[1], O_RDONLY);
-	if (fd == -1)
+	if (fd == -1 || pointcub(av[1]) == -1)
 	{
 		write(1, "wrong files\n", 10);
 		exit(0);
@@ -60,7 +60,7 @@ t_struct	initret(t_struct ret, char **av)
 	return (ret);
 }
 
-void		initvars(t_vars *vars, t_struct *ret, char *av)
+void		initvars(t_vars *vars)
 {
 	int w;
 	int h;
@@ -68,10 +68,6 @@ void		initvars(t_vars *vars, t_struct *ret, char *av)
 	w = 0;
 	h = 0;
 	vars->mlx = mlx_init();
-//	mlx_get_screen_size(vars->mlx, &w, &h);
-//	ret->longueur = (ret->longueur > w) ? w : ret->longueur;
-//	ret->hauteur = (ret->hauteur > h) ? h : ret->hauteur;
-	vars->win = mlx_new_window(vars->mlx, ret->longueur, ret->hauteur, av);
 	vars->x = 0;
 	vars->y = 0;
 	vars->vy = -1;
@@ -98,7 +94,7 @@ t_data		initimg(t_vars vars, t_struct ret, t_data img)
 	img.img[5] = mlx_xpm_file_to_image(vars.mlx,
 			ret.s, &img.textw[5], &img.texth[5]);
 	while (i++ <= 5)
-		(img.img[i] == 0) ? freeret(&ret) : 0;
+		(img.img[i] == 0) ? truefilebf(&ret) : 0;
 	img.frgb = 65536 * ret.f[0] + 256 * ret.f[1] + ret.f[2];
 	img.crgb = 65536 * ret.c[0] + 256 * ret.c[1] + ret.c[2];
 	return (img);

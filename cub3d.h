@@ -6,7 +6,7 @@
 /*   By: chgilber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 19:33:40 by chgilber          #+#    #+#             */
-/*   Updated: 2020/06/23 17:30:49 by chgilber         ###   ########.fr       */
+/*   Updated: 2020/06/25 16:42:02 by chgilber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <string.h>
 # include <math.h>
 # include <fcntl.h>
-//# include <mlx.h>
 # include "minilibx_opengl/mlx.h"
 # include "libft/libft.h"
 # include "GNL/get_next_line.h"
@@ -182,7 +181,7 @@ typedef	struct	s_all
 t_data			colorgb(t_data img, t_struct ret);
 t_struct		parse(int fd, char *av, t_struct ret);
 t_struct		initret(t_struct ret, char **av);
-void			initvars(t_vars *vars, t_struct *ret, char *av);
+void			initvars(t_vars *vars);
 t_data			initimg(t_vars vars, t_struct ret, t_data img);
 t_struct		initstrut(t_struct ret);
 t_dda			initdda(t_dda dda);
@@ -201,6 +200,8 @@ int				freeret(t_struct *ret);
 t_struct		ftdata(t_struct ret, int fd, char *av);
 t_struct		checklen(t_struct ret, int fd, char *av);
 
+void			truefilebf(t_struct *ret);
+int				pointcub(char *av);
 void			trisprite(t_all *all);
 int				nswespace(char map);
 void			freesplit(t_struct *ret);
